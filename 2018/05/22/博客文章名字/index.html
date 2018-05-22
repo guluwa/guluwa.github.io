@@ -8,18 +8,20 @@
   <link rel="dns-prefetch" href="http://yoursite.com">
   <title>博客文章名字 | 咕噜娃的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="Android程序员">
-<meta name="keywords" content="Android">
+  <meta name="description" content="YFlowLayout流式布局、支持点击事件   引入  12345在build.gradle中添加 dependencies &amp;#123;    compile &apos;cn.guluwa:yflowlayout:0.0.1&apos;&amp;#125;  用法  123456789101112131415161718192021222324252627在layout文件中添加 &amp;lt;com.guluwa.yflo">
+<meta name="keywords" content="随笔">
 <meta property="og:type" content="article">
 <meta property="og:title" content="博客文章名字">
 <meta property="og:url" content="http://yoursite.com/2018/05/22/博客文章名字/index.html">
 <meta property="og:site_name" content="咕噜娃的博客">
-<meta property="og:description" content="Android程序员">
+<meta property="og:description" content="YFlowLayout流式布局、支持点击事件   引入  12345在build.gradle中添加 dependencies &amp;#123;    compile &apos;cn.guluwa:yflowlayout:0.0.1&apos;&amp;#125;  用法  123456789101112131415161718192021222324252627在layout文件中添加 &amp;lt;com.guluwa.yflo">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2018-05-22T08:03:28.420Z">
+<meta property="og:image" content="https://github.com/guluwa/YFlowLayout/blob/master/device-2017-09-19-132154.png">
+<meta property="og:updated_time" content="2018-05-22T08:12:18.609Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="博客文章名字">
-<meta name="twitter:description" content="Android程序员">
+<meta name="twitter:description" content="YFlowLayout流式布局、支持点击事件   引入  12345在build.gradle中添加 dependencies &amp;#123;    compile &apos;cn.guluwa:yflowlayout:0.0.1&apos;&amp;#125;  用法  123456789101112131415161718192021222324252627在layout文件中添加 &amp;lt;com.guluwa.yflo">
+<meta name="twitter:image" content="https://github.com/guluwa/YFlowLayout/blob/master/device-2017-09-19-132154.png">
   
     <link rel="alternative" href="/atom.xml" title="咕噜娃的博客" type="application/atom+xml">
   
@@ -169,7 +171,17 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        
+        <h1 id="YFlowLayout"><a href="#YFlowLayout" class="headerlink" title="YFlowLayout"></a>YFlowLayout</h1><p>流式布局、支持点击事件</p>
+<p><img src="https://github.com/guluwa/YFlowLayout/blob/master/device-2017-09-19-132154.png" alt="demo"></p>
+<ul>
+<li>引入</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">在build.gradle中添加</span><br><span class="line"></span><br><span class="line"> dependencies &#123;</span><br><span class="line">    compile <span class="string">'cn.guluwa:yflowlayout:0.0.1'</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<ul>
+<li>用法</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line">在layout文件中添加 </span><br><span class="line"></span><br><span class="line">&lt;com.guluwa.yflowlayout.YFlowLayout</span><br><span class="line">        android:id=<span class="string">"@+id/mFlowLayout"</span></span><br><span class="line">        android:layout_width=<span class="string">"match_parent"</span></span><br><span class="line">        android:layout_height=<span class="string">"wrap_content"</span></span><br><span class="line">        android:background=<span class="string">"#847f7f"</span></span><br><span class="line">        android:padding=<span class="string">"20dp"</span> /&gt;</span><br><span class="line">        </span><br><span class="line"> 在activity中添加</span><br><span class="line"> </span><br><span class="line"> YFlowLayout mFlowLayout = findViewById(R.id.mFlowLayout);</span><br><span class="line"></span><br><span class="line">        LayoutInflater inflater = LayoutInflater.from(MainActivity.<span class="keyword">this</span>);</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; strs.length; i++) &#123;</span><br><span class="line">            TextView view = (TextView) inflater.inflate(R.layout.label_layout, mFlowLayout, <span class="keyword">false</span>);</span><br><span class="line">            view.setText(strs[i]);</span><br><span class="line">            <span class="keyword">if</span> (i &gt; <span class="number">10</span>)</span><br><span class="line">                view.setTextColor(getResources().getColor(R.color.colorAccent));</span><br><span class="line">            mFlowLayout.addView(view);</span><br><span class="line">        &#125;</span><br><span class="line">        mFlowLayout.setListener(<span class="keyword">new</span> OnItemClickListener() &#123;</span><br><span class="line">            <span class="meta">@Override</span></span><br><span class="line">            <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">onClick</span><span class="params">(<span class="keyword">int</span> position, View view)</span> </span>&#123;</span><br><span class="line">                Toast.makeText(MainActivity.<span class="keyword">this</span>, strs[position], Toast.LENGTH_SHORT).show();</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;);</span><br></pre></td></tr></table></figure>
+
       
 
       
@@ -198,6 +210,17 @@
     <div class="article-info article-info-index">
       
       
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">随笔</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
       
 
       
@@ -380,6 +403,10 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
             <input type="checkbox" q-on="click:toggleTag(e)" q-attr="checked:showTags">
           </label>
           <ul class="article-tag-list" q-show="showTags">
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">随笔</a>
+              </li>
             
             <div class="clearfix"></div>
           </ul>
