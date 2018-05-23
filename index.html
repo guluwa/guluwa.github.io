@@ -178,15 +178,9 @@
       
         <h1 id="1-环境搭建"><a href="#1-环境搭建" class="headerlink" title="1.环境搭建"></a>1.环境搭建</h1><h5 id="1-1-下载node-js和git，一路next即可。"><a href="#1-1-下载node-js和git，一路next即可。" class="headerlink" title="1.1 下载node.js和git，一路next即可。"></a>1.1 下载<a href="https://nodejs.org/en/download/" target="_blank" rel="noopener">node.js</a>和<a href="https://git-scm.com/downloads" target="_blank" rel="noopener">git</a>，一路next即可。</h5><p>安装完成之后，打开命令窗口（Win+R，输入CMD，回车），分别输入node -v,  npm -v, git -version,  如果都能像下图一样返回版本号就说明安装好了  </p>
 <p><img src="/2018/05/22/Github-hexo搭建博客（一）/img1.png" alt="img1"></p>
-<p>如果在这里不可以操作git，说明在安装时没有更改路径，设置为windows环境下也可以操作，不过没有关系，只需要将git的安装路径添加到环境变量中就可以在windows下操作，或者我们可以运行git bash，在这里查看git的版本号（安装git之后一定会生成git bash） </p>
-<h5 id="1-2-SSH授权"><a href="#1-2-SSH授权" class="headerlink" title="1.2 SSH授权"></a>1.2 SSH授权</h5><p>打开git bash，输入ssh-keygen -t rsa, 接着回车三下,</p>
-<p><img src="/2018/05/22/Github-hexo搭建博客（一）/img2.png" alt="img2"></p>
-<p>这样就会在C盘用户目录下生成id_rsa和id_rsa.pub这两个文件，前者是密钥，后者是公钥，用记事本打开id_rsa.pub，复制其中的全部内容，添加到GitHub上，这样本地的id_rsa密钥就可以和GitHub上的id_rsa.pub公钥进行配对，授权成功。  </p>
-<p><img src="/2018/05/22/Github-hexo搭建博客（一）/img3.jpg" alt="img3"></p>
-<p>SSH key添加之后，就可以在本机git bash中进行测试，输入ssh -T <a href="mailto:git@github.com" target="_blank" rel="noopener">git@github.com</a>进行测试，</p>
-<p><img src="/2018/05/22/Github-hexo搭建博客（一）/img4.png" alt="img4"></p>
-<p>返回Hi username ！You’ve successfully ……说明你已经成功啦~  </p>
-<h1 id="2-本地博客配置"><a href="#2-本地博客配置" class="headerlink" title="2.本地博客配置"></a>2.本地博客配置</h1>
+        
+          <a class="article-more-a" href="/2018/05/22/Github-hexo搭建博客（一）/#more">more >></a>
+        
       
 
       
@@ -199,7 +193,7 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">GitHub</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">-GitHub -hexo</a>
         		</li>
       		
 		</ul>
@@ -261,15 +255,9 @@
       
         <h1 id="YFlowLayout"><a href="#YFlowLayout" class="headerlink" title="YFlowLayout"></a>YFlowLayout</h1><p>流式布局、支持点击事件</p>
 <p><img src="/2018/05/22/YFlowLayout的用法/img1.png" alt="demo"></p>
-<ul>
-<li>引入</li>
-</ul>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">在build.gradle中添加</span><br><span class="line"></span><br><span class="line"> dependencies &#123;</span><br><span class="line">    compile <span class="string">'cn.guluwa:yflowlayout:0.0.1'</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<ul>
-<li>用法</li>
-</ul>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line">在layout文件中添加 </span><br><span class="line"></span><br><span class="line">&lt;com.guluwa.yflowlayout.YFlowLayout</span><br><span class="line">        android:id=<span class="string">"@+id/mFlowLayout"</span></span><br><span class="line">        android:layout_width=<span class="string">"match_parent"</span></span><br><span class="line">        android:layout_height=<span class="string">"wrap_content"</span></span><br><span class="line">        android:background=<span class="string">"#847f7f"</span></span><br><span class="line">        android:padding=<span class="string">"20dp"</span> /&gt;</span><br><span class="line">        </span><br><span class="line"> 在activity中添加</span><br><span class="line"> </span><br><span class="line"> YFlowLayout mFlowLayout = findViewById(R.id.mFlowLayout);</span><br><span class="line"></span><br><span class="line">        LayoutInflater inflater = LayoutInflater.from(MainActivity.<span class="keyword">this</span>);</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; strs.length; i++) &#123;</span><br><span class="line">            TextView view = (TextView) inflater.inflate(R.layout.label_layout, mFlowLayout, <span class="keyword">false</span>);</span><br><span class="line">            view.setText(strs[i]);</span><br><span class="line">            <span class="keyword">if</span> (i &gt; <span class="number">10</span>)</span><br><span class="line">                view.setTextColor(getResources().getColor(R.color.colorAccent));</span><br><span class="line">            mFlowLayout.addView(view);</span><br><span class="line">        &#125;</span><br><span class="line">        mFlowLayout.setListener(<span class="keyword">new</span> OnItemClickListener() &#123;</span><br><span class="line">            <span class="meta">@Override</span></span><br><span class="line">            <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">onClick</span><span class="params">(<span class="keyword">int</span> position, View view)</span> </span>&#123;</span><br><span class="line">                Toast.makeText(MainActivity.<span class="keyword">this</span>, strs[position], Toast.LENGTH_SHORT).show();</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;);</span><br></pre></td></tr></table></figure>
-
+        
+          <a class="article-more-a" href="/2018/05/22/YFlowLayout的用法/#more">more >></a>
+        
       
 
       
@@ -407,11 +395,15 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">GitHub</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">随笔</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">GitHub</a>
+                <a href="javascript:void(0)" class="js-tag color4">-GitHub -hexo</a>
               </li>
             
             <div class="clearfix"></div>
