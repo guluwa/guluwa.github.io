@@ -373,7 +373,61 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
 
 
 //这是自定一个js文件,放在 layout\_parial\post 目录 leancloud.ejs中
- 
+<script src="//cdn1.lncld.net/static/js/2.5.0/av-min.js"></script>
+<script type="text/javascript"> 
+if(true){
+    var leancloud_app_id  = 'IfMTeY96ySms5pMo3wp9mub2-gzGzoHsz';
+    var leancloud_app_key = 'sUQ8w1nVdoigGdcVIbDIe5DA';
+
+    AV.init({
+        appId: leancloud_app_id,
+        appKey: leancloud_app_key
+    });
+
+    var pageViewsLength = $(".pageViews").length;
+
+    var isIndex = $(".pageViews").length > 1 ?true:false;
+
+    function showTime() {
+        var Counter = AV.Object.extend("Counter");
+        if(isIndex){
+            $(".pageViews").each(function(){
+                showPageViewsNum($(this),Counter);
+                addPageViewsNum($(this));
+            });
+        }else{
+            showPageViewsNum($(".pageViews"),Counter);
+            addPageViewsNum($(".pageViews"));
+        }
+    }
+
+    //显示阅读量
+    function showPageViewsNum(ele,Counter){
+        var query = new AV.Query("Counter");
+        var url = ele.attr('id').trim();
+            query.equalTo("words", url);
+            query.count().then(function (number) {
+                $(document.getElementById(url)).text(number?  number : '0');
+            }, function (error) {
+                 $(document.getElementById(url)).text('0');
+            });
+    }
+
+    //追加阅读量
+    function addPageViewsNum(ele){
+        var url = ele.attr('id').trim();
+        var Counter = AV.Object.extend("Counter");
+        var query = new Counter;
+        query.save({
+            words: url
+        }).then(function (object) {});
+    }
+
+    if(pageViewsLength){ //此处判断等于 1 在执行 可去除循环
+        showTime();
+    }
+}
+</script> 
 
 
 #下面是 yilia 主题配置自带
