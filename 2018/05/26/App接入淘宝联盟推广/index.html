@@ -6,23 +6,27 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Github+hexo搭建博客（三） | 咕噜娃的博客</title>
+  <title>App接入淘宝联盟推广 | 咕噜娃的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="这是Github+hexo搭建博客教程第三篇，主要内容是如何在文章中添加图片和添加文章目录。 1. 发布带图片的博客 把主页配置文件_config.yml 里的post_asset_folder:这个选项设置为true  在你的hexo目录下执行这样一句话npm install hexo-asset-image --save，这是下载安装一个可以上传本地图片的插件">
-<meta name="keywords" content="GitHub,hexo">
+  <meta name="description" content="最近的公司项目接入了淘宝联盟推广，本文记录一下接入步骤。（本文是为了调taobao.tbk.dg.item.coupon.get 好券api接口） 1.准备进入淘宝联盟后台,完成注册流程之后，登录进入淘宝联盟后台，点击最左边推广管理—APP管理，  注意：这里的AppKey很重要，在调接口的时候会用到。">
+<meta name="keywords" content="淘宝">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Github+hexo搭建博客（三）">
-<meta property="og:url" content="http://yoursite.com/2018/05/23/Github-hexo搭建博客（三）/index.html">
+<meta property="og:title" content="App接入淘宝联盟推广">
+<meta property="og:url" content="http://yoursite.com/2018/05/26/App接入淘宝联盟推广/index.html">
 <meta property="og:site_name" content="咕噜娃的博客">
-<meta property="og:description" content="这是Github+hexo搭建博客教程第三篇，主要内容是如何在文章中添加图片和添加文章目录。 1. 发布带图片的博客 把主页配置文件_config.yml 里的post_asset_folder:这个选项设置为true  在你的hexo目录下执行这样一句话npm install hexo-asset-image --save，这是下载安装一个可以上传本地图片的插件">
+<meta property="og:description" content="最近的公司项目接入了淘宝联盟推广，本文记录一下接入步骤。（本文是为了调taobao.tbk.dg.item.coupon.get 好券api接口） 1.准备进入淘宝联盟后台,完成注册流程之后，登录进入淘宝联盟后台，点击最左边推广管理—APP管理，  注意：这里的AppKey很重要，在调接口的时候会用到。">
 <meta property="og:locale" content="default">
-<meta property="og:image" content="http://yoursite.com/2018/05/23/Github-hexo搭建博客（三）/img1.png">
-<meta property="og:image" content="http://yoursite.com/2018/05/23/Github-hexo搭建博客（三）/img2.jpg">
-<meta property="og:updated_time" content="2018-05-23T06:12:19.212Z">
+<meta property="og:image" content="http://yoursite.com/2018/05/26/App接入淘宝联盟推广/img1.png">
+<meta property="og:image" content="http://yoursite.com/2018/05/26/App接入淘宝联盟推广/img2.png">
+<meta property="og:image" content="http://yoursite.com/2018/05/26/App接入淘宝联盟推广/img3.png">
+<meta property="og:image" content="http://yoursite.com/2018/05/26/App接入淘宝联盟推广/img4.png">
+<meta property="og:image" content="http://yoursite.com/2018/05/26/App接入淘宝联盟推广/img5.jpg">
+<meta property="og:image" content="http://yoursite.com/2018/05/26/App接入淘宝联盟推广/img6.jpg">
+<meta property="og:updated_time" content="2018-05-26T07:46:06.031Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Github+hexo搭建博客（三）">
-<meta name="twitter:description" content="这是Github+hexo搭建博客教程第三篇，主要内容是如何在文章中添加图片和添加文章目录。 1. 发布带图片的博客 把主页配置文件_config.yml 里的post_asset_folder:这个选项设置为true  在你的hexo目录下执行这样一句话npm install hexo-asset-image --save，这是下载安装一个可以上传本地图片的插件">
-<meta name="twitter:image" content="http://yoursite.com/2018/05/23/Github-hexo搭建博客（三）/img1.png">
+<meta name="twitter:title" content="App接入淘宝联盟推广">
+<meta name="twitter:description" content="最近的公司项目接入了淘宝联盟推广，本文记录一下接入步骤。（本文是为了调taobao.tbk.dg.item.coupon.get 好券api接口） 1.准备进入淘宝联盟后台,完成注册流程之后，登录进入淘宝联盟后台，点击最左边推广管理—APP管理，  注意：这里的AppKey很重要，在调接口的时候会用到。">
+<meta name="twitter:image" content="http://yoursite.com/2018/05/26/App接入淘宝联盟推广/img1.png">
   
     <link rel="alternative" href="/atom.xml" title="咕噜娃的博客" type="application/atom+xml">
   
@@ -156,65 +160,50 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-Github-hexo搭建博客（三）" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-App接入淘宝联盟推广" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      Github+hexo搭建博客（三）
+      App接入淘宝联盟推广
     </h1>
   
 
 
   <a href="javascript:;" class="archive-article-date">
-      <i class="icon-smile icon"></i> 阅读数:<span id="/2018/05/23/Github-hexo搭建博客（三）/" class="pageViews">0</span>次
+      <i class="icon-smile icon"></i> 阅读数:<span id="/2018/05/26/App接入淘宝联盟推广/" class="pageViews">0</span>次
   </a>
 
         
-        <a href="/2018/05/23/Github-hexo搭建博客（三）/" class="archive-article-date">
-  	<time datetime="2018-05-23T02:56:10.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-05-23</time>
+        <a href="/2018/05/26/App接入淘宝联盟推广/" class="archive-article-date">
+  	<time datetime="2018-05-26T06:25:51.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-05-26</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>这是Github+hexo搭建博客教程第三篇，主要内容是如何在文章中添加图片和添加文章目录。</p>
-<h1 id="1-发布带图片的博客"><a href="#1-发布带图片的博客" class="headerlink" title="1. 发布带图片的博客"></a>1. 发布带图片的博客</h1><ul>
-<li><p>把主页配置文件_config.yml 里的post_asset_folder:这个选项设置为true</p>
-</li>
-<li><p>在你的hexo目录下执行这样一句话<code>npm install hexo-asset-image --save</code>，这是下载安装一个可以上传本地图片的插件</p>
-</li>
-</ul>
+        <p>最近的公司项目接入了淘宝联盟推广，本文记录一下接入步骤。（本文是为了调<code>taobao.tbk.dg.item.coupon.get</code> 好券api接口）</p>
+<h1 id="1-准备"><a href="#1-准备" class="headerlink" title="1.准备"></a>1.准备</h1><p>进入<a href="https://www.alimama.com/member/login.htm?forward=http%3A%2F%2Fpub.alimama.com%2Fmyunion.htm%3Fspm%3Da3c0d.7998981.0.0.24bf2f45RQzDmy" target="_blank" rel="noopener">淘宝联盟后台</a>,完成注册流程之后，登录进入淘宝联盟后台，点击最左边推广管理—APP管理，</p>
+<p><img src="/2018/05/26/App接入淘宝联盟推广/img1.png" alt="img1"></p>
+<p>注意：这里的<code>AppKey</code>很重要，在调接口的时候会用到。</p>
 <a id="more"></a>
-<ul>
-<li>等待一小段时间后，再运行hexo n “xxxx”来生成md博文时，/source/_posts文件夹内除了xxxx.md文件还有一个同名的文件夹</li>
-</ul>
-<p><img src="/2018/05/23/Github-hexo搭建博客（三）/img1.png" alt="img1"></p>
-<ul>
-<li>最后在xxxx.md中想引入图片时，先把图片复制到xxxx这个文件夹中，然后只需要在xxxx.md中按照markdown的格式引入图片：</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">![你想输入的替代文字](xxxx/图片名.jpg)</span><br></pre></td></tr></table></figure>
-<p>注意： xxxx是这个md文件的名字，也是同名文件夹的名字。只需要有文件夹名字即可，不需要有什么绝对路径。你想引入的图片就只需要放入xxxx这个文件夹内就好了，很像引用相对路径。</p>
-<ul>
-<li>最后检查一下，hexo g生成页面后，进入<code>public\2017\02\26\index.html</code>文件中查看相关字段，可以发现，<code>html</code>标签内的语句是<code>&lt;img src=&quot;2017/02/26/xxxx/图片名.jpg&quot;&gt;</code>，而不是<code>&lt;img src=&quot;xxxx/图片名.jpg&gt;</code>。这很重要，关乎你的网页是否可以真正加载你想插入的图片。</li>
-</ul>
-<h1 id="2-实现文章目录"><a href="#2-实现文章目录" class="headerlink" title="2. 实现文章目录"></a>2. 实现文章目录</h1><h2 id="2-1-添加CSS样式"><a href="#2-1-添加CSS样式" class="headerlink" title="2.1 添加CSS样式"></a>2.1 添加CSS样式</h2><ul>
-<li>打开<code>themes\yilia\source</code>下的<code>main.0cf68a.css</code>文件，在最底下添加如下代码：</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">/* 新添加的 */</span><br><span class="line">#container .show-toc-btn,#container .toc-article&#123;display:block&#125;</span><br><span class="line">.toc-article&#123;z-index:100;background:#fff;border:1px solid #ccc;max-width:250px;min-width:150px;max-height:500px;overflow-y:auto;-webkit-box-shadow:5px 5px 2px #ccc;box-shadow:5px 5px 2px #ccc;font-size:12px;padding:10px;position:fixed;right:35px;top:129px&#125;.toc-article .toc-close&#123;font-weight:700;font-size:20px;cursor:pointer;float:right;color:#ccc&#125;.toc-article .toc-close:hover&#123;color:#000&#125;.toc-article .toc&#123;font-size:12px;padding:0;line-height:20px&#125;.toc-article .toc .toc-number&#123;color:#333&#125;.toc-article .toc .toc-text:hover&#123;text-decoration:underline;color:#2a6496&#125;.toc-article li&#123;list-style-type:none&#125;.toc-article .toc-level-1&#123;margin:4px 0&#125;.toc-article .toc-child&#123;&#125;@-moz-keyframes cd-bounce-1&#123;0%&#123;opacity:0;-o-transform:scale(1);-webkit-transform:scale(1);-moz-transform:scale(1);-ms-transform:scale(1);transform:scale(1)&#125;60%&#123;opacity:1;-o-transform:scale(1.01);-webkit-transform:scale(1.01);-moz-transform:scale(1.01);-ms-transform:scale(1.01);transform:scale(1.01)&#125;100%&#123;-o-transform:scale(1);-webkit-transform:scale(1);-moz-transform:scale(1);-ms-transform:scale(1);transform:scale(1)&#125;&#125;@-webkit-keyframes cd-bounce-1&#123;0%&#123;opacity:0;-o-transform:scale(1);-webkit-transform:scale(1);-moz-transform:scale(1);-ms-transform:scale(1);transform:scale(1)&#125;60%&#123;opacity:1;-o-transform:scale(1.01);-webkit-transform:scale(1.01);-moz-transform:scale(1.01);-ms-transform:scale(1.01);transform:scale(1.01)&#125;100%&#123;-o-transform:scale(1);-webkit-transform:scale(1);-moz-transform:scale(1);-ms-transform:scale(1);transform:scale(1)&#125;&#125;@-o-keyframes cd-bounce-1&#123;0%&#123;opacity:0;-o-transform:scale(1);-webkit-transform:scale(1);-moz-transform:scale(1);-ms-transform:scale(1);transform:scale(1)&#125;60%&#123;opacity:1;-o-transform:scale(1.01);-webkit-transform:scale(1.01);-moz-transform:scale(1.01);-ms-transform:scale(1.01);transform:scale(1.01)&#125;100%&#123;-o-transform:scale(1);-webkit-transform:scale(1);-moz-transform:scale(1);-ms-transform:scale(1);transform:scale(1)&#125;&#125;@keyframes cd-bounce-1&#123;0%&#123;opacity:0;-o-transform:scale(1);-webkit-transform:scale(1);-moz-transform:scale(1);-ms-transform:scale(1);transform:scale(1)&#125;60%&#123;opacity:1;-o-transform:scale(1.01);-webkit-transform:scale(1.01);-moz-transform:scale(1.01);-ms-transform:scale(1.01);transform:scale(1.01)&#125;100%&#123;-o-transform:scale(1);-webkit-transform:scale(1);-moz-transform:scale(1);-ms-transform:scale(1);transform:scale(1)&#125;&#125;.show-toc-btn&#123;display:none;z-index:10;width:30px;min-height:14px;overflow:hidden;padding:4px 6px 8px 5px;border:1px solid #ddd;border-right:none;position:fixed;right:40px;text-align:center;background-color:#f9f9f9&#125;.show-toc-btn .btn-bg&#123;margin-top:2px;display:block;width:16px;height:14px;background:url(http://7xtawy.com1.z0.glb.clouddn.com/show.png) no-repeat;-webkit-background-size:100%;-moz-background-size:100%;background-size:100%&#125;.show-toc-btn .btn-text&#123;color:#999;font-size:12px&#125;.show-toc-btn:hover&#123;cursor:pointer&#125;.show-toc-btn:hover .btn-bg&#123;background-position:0 -16px&#125;.show-toc-btn:hover .btn-text&#123;font-size:12px;color:#ea8010&#125;</span><br><span class="line"></span><br><span class="line">.toc-article li ol, .toc-article li ul &#123;</span><br><span class="line">    margin-left: 30px;</span><br><span class="line">&#125;</span><br><span class="line">.toc-article ol, .toc-article ul &#123;</span><br><span class="line">    margin: 10px 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h2 id="2-2-修改article-ejs文件"><a href="#2-2-修改article-ejs文件" class="headerlink" title="2.2 修改article.ejs文件"></a>2.2 修改article.ejs文件</h2><ul>
-<li>使用的是Hexo的toc函数 </li>
-<li>打开<code>themes\yilia\layout\_partial</code>文件夹下的<code>article.ejs</code>文件</li>
-<li><p>在最底下加入如下内容</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line">&lt;!-- 目录内容 --&gt;</span><br><span class="line">        &lt;% if (!index &amp;&amp; post.toc)&#123; %&gt;</span><br><span class="line">            &lt;p class=&quot;show-toc-btn&quot; id=&quot;show-toc-btn&quot; onclick=&quot;showToc();&quot; style=&quot;display:none&quot;&gt;</span><br><span class="line">            &lt;span class=&quot;btn-bg&quot;&gt;&lt;/span&gt;</span><br><span class="line">            &lt;span class=&quot;btn-text&quot;&gt;文章导航&lt;/span&gt;</span><br><span class="line">            &lt;/p&gt;</span><br><span class="line">            &lt;div id=&quot;toc-article&quot; class=&quot;toc-article&quot;&gt;</span><br><span class="line">                &lt;span id=&quot;toc-close&quot; class=&quot;toc-close&quot; title=&quot;隐藏导航&quot; onclick=&quot;showBtn();&quot;&gt;×&lt;/span&gt;</span><br><span class="line">                &lt;strong class=&quot;toc-title&quot;&gt;文章目录&lt;/strong&gt;</span><br><span class="line">                &lt;%- toc(post.content) %&gt;</span><br><span class="line">           &lt;/div&gt;</span><br><span class="line">           &lt;script type=&quot;text/javascript&quot;&gt;</span><br><span class="line">            function showToc()&#123;</span><br><span class="line">                var toc_article = document.getElementById(&quot;toc-article&quot;);</span><br><span class="line">                var show_toc_btn = document.getElementById(&quot;show-toc-btn&quot;);</span><br><span class="line">                toc_article.setAttribute(&quot;style&quot;,&quot;display:block&quot;);</span><br><span class="line">                show_toc_btn.setAttribute(&quot;style&quot;,&quot;display:none&quot;);</span><br><span class="line">                &#125;;</span><br><span class="line">            function showBtn()&#123;</span><br><span class="line">                var toc_article = document.getElementById(&quot;toc-article&quot;);</span><br><span class="line">                var show_toc_btn = document.getElementById(&quot;show-toc-btn&quot;);</span><br><span class="line">                toc_article.setAttribute(&quot;style&quot;,&quot;display:none&quot;);</span><br><span class="line">                show_toc_btn.setAttribute(&quot;style&quot;,&quot;display:block&quot;);</span><br><span class="line">                &#125;;</span><br><span class="line">           &lt;/script&gt;</span><br><span class="line">        &lt;% &#125; %&gt;     </span><br><span class="line">        &lt;!-- 目录内容结束 --&gt;</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>然后若想要文章显示目录，在每篇文章开头加入：<code>toc: true</code></p>
-</li>
-</ul>
-<p><img src="/2018/05/23/Github-hexo搭建博客（三）/img2.jpg" alt="img2"></p>
+<p>然后接下来需要获取<code>pid</code>和<code>adZoneId</code>,<code>adZoneId</code>是<code>pid</code>的第三段，点击最左边联盟产品—超级搜索，</p>
+<p><img src="/2018/05/26/App接入淘宝联盟推广/img2.png" alt="img2"></p>
+<p>点击立即推广，填写信息之后，完成推广位的创建。</p>
+<p><img src="/2018/05/26/App接入淘宝联盟推广/img3.png" alt="img3"></p>
+<p>点击最左边推广管理—推广位管理—APP推广位</p>
+<p><img src="/2018/05/26/App接入淘宝联盟推广/img4.png" alt="img4"></p>
+<p>可以看到你刚创建的推广位，<code>pid</code>很重要，<code>pid</code>对应了<code>App Id</code>和<code>adZoneId</code>，后面都会用到。</p>
+<p>接下来需要获取应用的secret，进入<a href="https://login.taobao.com/member/login.jhtml?f=top&amp;redirectURL=http%3A%2F%2Fconsole.open.taobao.com%2F%3Fspm%3Da219a.7386653.1.25.tSFr7H" target="_blank" rel="noopener">阿里开放平台入口</a>，登录，应用管理，选择与刚才创建的<code>AppKey</code>一致的应用</p>
+<p><img src="/2018/05/26/App接入淘宝联盟推广/img5.jpg" alt="img5"></p>
+<p>查看secret，并保存。</p>
+<h1 id="2-程序"><a href="#2-程序" class="headerlink" title="2.程序"></a>2.程序</h1><p>如上图，点击左边<code>SDK</code>下载，服务端<code>SDK</code>，即可下载需要的版本，要注意的是，下载之前要先生成，然后过几分钟，再下栽，一定要注意时间是否是自己刚执行操作的时间。</p>
+<p>导入<code>SDK</code>之后，开始调<a href="http://open.taobao.com/docs/api.htm?&amp;apiId=29821" target="_blank" rel="noopener">好券api接口</a>，我这里的<code>Kotlin</code>版本的。</p>
+<p><img src="/2018/05/26/App接入淘宝联盟推广/img6.jpg" alt="img6"></p>
+<p>这个三个地方就是我们上面获取到的三个数据，分别填入即可，可能开始没有数据，应该是数据更新延迟的问题，大概半天即可正常使用接口，超过半天如果还是没有数据或是数据不正常，很可能是以上三个数据没有对应，再检查一下。</p>
 
       
 
@@ -228,11 +217,7 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">GitHub</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">hexo</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">淘宝</a>
         		</li>
       		
 		</ul>
@@ -288,7 +273,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2018/05/23/Github-hexo搭建博客（三）/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2018/05/26/App接入淘宝联盟推广/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -302,18 +287,9 @@
   
 <nav id="article-nav">
   
-    <a href="/2018/05/23/Github-hexo搭建博客（四）/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          Github+hexo搭建博客（四）
-        
-      </div>
-    </a>
   
-  
-    <a href="/2018/05/23/Github-hexo搭建博客（二）/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">Github+hexo搭建博客（二）</div>
+    <a href="/2018/05/23/Github-hexo搭建博客（四）/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Github+hexo搭建博客（四）</div>
       <i class="icon-circle-right"></i>
     </a>
   
@@ -340,7 +316,7 @@
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#1-发布带图片的博客"><span class="toc-number">1.</span> <span class="toc-text">1. 发布带图片的博客</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#2-实现文章目录"><span class="toc-number">2.</span> <span class="toc-text">2. 实现文章目录</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#2-1-添加CSS样式"><span class="toc-number">2.1.</span> <span class="toc-text">2.1 添加CSS样式</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-2-修改article-ejs文件"><span class="toc-number">2.2.</span> <span class="toc-text">2.2 修改article.ejs文件</span></a></li></ol></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#1-准备"><span class="toc-number">1.</span> <span class="toc-text">1.准备</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#2-程序"><span class="toc-number">2.</span> <span class="toc-text">2.程序</span></a></li></ol>
                     </div>
                 </span>
             </div>
@@ -370,7 +346,7 @@
             <div id="toc-article" class="toc-article">
                 <span id="toc-close" class="toc-close" title="隐藏导航" onclick="showBtn();">×</span>
                 <strong class="toc-title">文章目录</strong>
-                <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#1-发布带图片的博客"><span class="toc-number">1.</span> <span class="toc-text">1. 发布带图片的博客</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#2-实现文章目录"><span class="toc-number">2.</span> <span class="toc-text">2. 实现文章目录</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#2-1-添加CSS样式"><span class="toc-number">2.1.</span> <span class="toc-text">2.1 添加CSS样式</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-2-修改article-ejs文件"><span class="toc-number">2.2.</span> <span class="toc-text">2.2 修改article.ejs文件</span></a></li></ol></li></ol>
+                <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#1-准备"><span class="toc-number">1.</span> <span class="toc-text">1.准备</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#2-程序"><span class="toc-number">2.</span> <span class="toc-text">2.程序</span></a></li></ol>
            </div>
            <script type="text/javascript">
             function showToc(){
