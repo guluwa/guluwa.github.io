@@ -21,7 +21,10 @@
 <meta property="og:image" content="http://yoursite.com/2018/05/31/SpringBoot学习日记（一）/img3.jpg">
 <meta property="og:image" content="http://yoursite.com/2018/05/31/SpringBoot学习日记（一）/img4.jpg">
 <meta property="og:image" content="http://yoursite.com/2018/05/31/SpringBoot学习日记（一）/img5.jpg">
-<meta property="og:updated_time" content="2018-06-04T06:46:33.155Z">
+<meta property="og:image" content="http://yoursite.com/2018/05/31/SpringBoot学习日记（一）/img6.jpg">
+<meta property="og:image" content="http://yoursite.com/2018/05/31/SpringBoot学习日记（一）/img7.jpg">
+<meta property="og:image" content="http://yoursite.com/2018/05/31/SpringBoot学习日记（一）/img8.jpg">
+<meta property="og:updated_time" content="2018-06-04T06:57:44.225Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="SpringBoot学习日记（一）">
 <meta name="twitter:description" content="今天开始学习SpringBoot，作为一个安卓程序员，了解一点后端知识，也是必须的。开发工具 IntelliJ IDEA 2018.1.2 x64；项目所需环境 jdk1.8，gradle，mysql数据库；这些就不介绍了，直接新建项目。 1.新建项目1.1 File–New–Project，选择Spring Initializr">
@@ -204,7 +207,13 @@
 <p><img src="/2018/05/31/SpringBoot学习日记（一）/img5.jpg" alt="img5"></p>
 <p>接下来新建数据表UserInfo，执行代码</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">CREATE TABLE `user_info` (</span><br><span class="line">  `id` int(32) NOT NULL AUTO_INCREMENT,</span><br><span class="line">  `user_name` varchar(255) DEFAULT NULL,</span><br><span class="line">  PRIMARY KEY (`id`)</span><br><span class="line">) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;</span><br></pre></td></tr></table></figure>
-<p>具体代码 可以下载项目查看。</p>
+<p>在<code>IDEA</code>里面可以很方便查看数据库的数据，只需要填入数据库名、用户名、密码即可</p>
+<p><img src="/2018/05/31/SpringBoot学习日记（一）/img6.jpg" alt="img6"></p>
+<p>运行项目，出现下图，说明项目运行成功</p>
+<p><img src="/2018/05/31/SpringBoot学习日记（一）/img7.jpg" alt="img7"></p>
+<p>接下来打开<code>Postman</code>测试接口，成功返回数据。</p>
+<p><img src="/2018/05/31/SpringBoot学习日记（一）/img8.jpg" alt="img8"></p>
+<p>具体代码 后面会上传到Github（今天听说Github被微软收购了。。。还接入了广告）</p>
 
       
 
@@ -529,15 +538,15 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">淘宝</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">GitHub</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">hexo</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">淘宝</a>
               </li>
              
               <li class="article-tag-list-item">
