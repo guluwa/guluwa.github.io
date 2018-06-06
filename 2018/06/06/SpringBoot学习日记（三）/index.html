@@ -6,19 +6,23 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Tag: GitHub | 咕噜娃的博客</title>
+  <title>SpringBoot学习日记（二） | 咕噜娃的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="Android程序员">
-<meta name="keywords" content="Android">
-<meta property="og:type" content="website">
-<meta property="og:title" content="咕噜娃的博客">
-<meta property="og:url" content="http://yoursite.com/tags/GitHub/index.html">
+  <meta name="description" content="1. 自定义消息转换器1.1 消息转换器作用不知道大家有没有遇到过这种情况：后台接口返回一个实例，当你需要使用某个属性的值时，你还要判断一下值是否为null；接口返回一堆属性值为null的属性等 ok，消息转换器可以帮你解决这个问题">
+<meta name="keywords" content="Spring">
+<meta property="og:type" content="article">
+<meta property="og:title" content="SpringBoot学习日记（二）">
+<meta property="og:url" content="http://yoursite.com/2018/06/06/SpringBoot学习日记（三）/index.html">
 <meta property="og:site_name" content="咕噜娃的博客">
-<meta property="og:description" content="Android程序员">
+<meta property="og:description" content="1. 自定义消息转换器1.1 消息转换器作用不知道大家有没有遇到过这种情况：后台接口返回一个实例，当你需要使用某个属性的值时，你还要判断一下值是否为null；接口返回一堆属性值为null的属性等 ok，消息转换器可以帮你解决这个问题">
 <meta property="og:locale" content="default">
+<meta property="og:image" content="http://yoursite.com/2018/06/06/SpringBoot学习日记（三）/img1.png">
+<meta property="og:image" content="http://yoursite.com/2018/06/06/SpringBoot学习日记（三）/img2.png">
+<meta property="og:updated_time" content="2018-06-06T06:44:12.145Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="咕噜娃的博客">
-<meta name="twitter:description" content="Android程序员">
+<meta name="twitter:title" content="SpringBoot学习日记（二）">
+<meta name="twitter:description" content="1. 自定义消息转换器1.1 消息转换器作用不知道大家有没有遇到过这种情况：后台接口返回一个实例，当你需要使用某个属性的值时，你还要判断一下值是否为null；接口返回一堆属性值为null的属性等 ok，消息转换器可以帮你解决这个问题">
+<meta name="twitter:image" content="http://yoursite.com/2018/06/06/SpringBoot学习日记（三）/img1.png">
   
     <link rel="alternative" href="/atom.xml" title="咕噜娃的博客" type="application/atom+xml">
   
@@ -158,211 +162,204 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-SpringBoot学习日记（三）" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      SpringBoot学习日记（二）
+    </h1>
+  
+
+
+  <a href="javascript:;" class="archive-article-date">
+      <i class="icon-smile icon"></i> 阅读数:<span id="/2018/06/06/SpringBoot学习日记（三）/" class="pageViews">0</span>次
+  </a>
+
+        
+        <a href="/2018/06/06/SpringBoot学习日记（三）/" class="archive-article-date">
+  	<time datetime="2018-06-06T05:40:16.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-06-06</time>
+</a>
+        
+      </header>
     
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="1-自定义消息转换器"><a href="#1-自定义消息转换器" class="headerlink" title="1. 自定义消息转换器"></a>1. 自定义消息转换器</h1><h2 id="1-1-消息转换器作用"><a href="#1-1-消息转换器作用" class="headerlink" title="1.1 消息转换器作用"></a>1.1 消息转换器作用</h2><p>不知道大家有没有遇到过这种情况：后台接口返回一个实例，当你需要使用某个属性的值时，你还要判断一下值是否为null；接口返回一堆属性值为null的属性等</p>
+<p>ok，消息转换器可以帮你解决这个问题</p>
+<a id="more"></a>
+<h2 id="1-2-添加fastjson依赖"><a href="#1-2-添加fastjson依赖" class="headerlink" title="1.2 添加fastjson依赖"></a>1.2 添加fastjson依赖</h2><p>在<code>build.gradle</code>中添加<code>compile group: &#39;com.alibaba&#39;, name: &#39;fastjson&#39;, version: &#39;1.2.47&#39;</code></p>
+<h2 id="1-3-新建WebConfigurer"><a href="#1-3-新建WebConfigurer" class="headerlink" title="1.3 新建WebConfigurer"></a>1.3 新建<code>WebConfigurer</code></h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br></pre></td><td class="code"><pre><span class="line">@Configuration</span><br><span class="line">public class WebConfigurer extends WebMvcConfigurationSupport &#123;</span><br><span class="line"></span><br><span class="line">    /**</span><br><span class="line">     * 修改自定义消息转换器</span><br><span class="line">     * @param converters</span><br><span class="line">     */</span><br><span class="line">    @Override</span><br><span class="line">    public void configureMessageConverters(List&lt;HttpMessageConverter&lt;?&gt;&gt; converters) &#123;</span><br><span class="line">        FastJsonHttpMessageConverter4 converter = new FastJsonHttpMessageConverter4();</span><br><span class="line">        converter.setSupportedMediaTypes(getSupportedMediaTypes());</span><br><span class="line">        FastJsonConfig config = new FastJsonConfig();</span><br><span class="line">        config.setSerializerFeatures(</span><br><span class="line">                // String null -&gt; &quot;&quot;</span><br><span class="line">                SerializerFeature.WriteNullStringAsEmpty,</span><br><span class="line">                // Number null -&gt; 0</span><br><span class="line">                SerializerFeature.WriteNullNumberAsZero,</span><br><span class="line">                //禁止循环引用</span><br><span class="line">                SerializerFeature.DisableCircularReferenceDetect</span><br><span class="line">        );</span><br><span class="line">        converter.setFastJsonConfig(config);</span><br><span class="line">        converter.setDefaultCharset(Charset.forName(&quot;UTF-8&quot;));</span><br><span class="line">        converters.add(converter);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    private List&lt;MediaType&gt; getSupportedMediaTypes() &#123;</span><br><span class="line">        List&lt;MediaType&gt; supportedMediaTypes = new ArrayList&lt;&gt;();</span><br><span class="line">        supportedMediaTypes.add(MediaType.APPLICATION_JSON);</span><br><span class="line">        supportedMediaTypes.add(MediaType.APPLICATION_JSON_UTF8);</span><br><span class="line">        supportedMediaTypes.add(MediaType.APPLICATION_ATOM_XML);</span><br><span class="line">        supportedMediaTypes.add(MediaType.APPLICATION_FORM_URLENCODED);</span><br><span class="line">        supportedMediaTypes.add(MediaType.APPLICATION_OCTET_STREAM);</span><br><span class="line">        supportedMediaTypes.add(MediaType.APPLICATION_PDF);</span><br><span class="line">        supportedMediaTypes.add(MediaType.APPLICATION_RSS_XML);</span><br><span class="line">        supportedMediaTypes.add(MediaType.APPLICATION_XHTML_XML);</span><br><span class="line">        supportedMediaTypes.add(MediaType.APPLICATION_XML);</span><br><span class="line">        supportedMediaTypes.add(MediaType.IMAGE_GIF);</span><br><span class="line">        supportedMediaTypes.add(MediaType.IMAGE_JPEG);</span><br><span class="line">        supportedMediaTypes.add(MediaType.IMAGE_PNG);</span><br><span class="line">        supportedMediaTypes.add(MediaType.TEXT_EVENT_STREAM);</span><br><span class="line">        supportedMediaTypes.add(MediaType.TEXT_HTML);</span><br><span class="line">        supportedMediaTypes.add(MediaType.TEXT_MARKDOWN);</span><br><span class="line">        supportedMediaTypes.add(MediaType.TEXT_PLAIN);</span><br><span class="line">        supportedMediaTypes.add(MediaType.TEXT_XML);</span><br><span class="line">        return supportedMediaTypes;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p><code>config.setSerializerFeatures()</code>方法可以添加多个配置</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">WriteNullListAsEmpty  ：List字段如果为null,输出为[],而非null</span><br><span class="line">WriteNullStringAsEmpty ： 字符类型字段如果为null,输出为&quot;&quot;,而非null</span><br><span class="line">DisableCircularReferenceDetect ：消除对同一对象循环引用的问题，默认为false（如果不配置有可能会进入死循环）</span><br><span class="line">WriteNullBooleanAsFalse：Boolean字段如果为null,输出为false,而非null</span><br><span class="line">WriteMapNullValue：是否输出值为null的字段,默认为false</span><br></pre></td></tr></table></figure>
+<h2 id="1-4-测试"><a href="#1-4-测试" class="headerlink" title="1.4 测试"></a>1.4 测试</h2><p>还是请求第二节中的那个接口，返回结果如下图</p>
+<p><img src="/2018/06/06/SpringBoot学习日记（三）/img1.png" alt="img1"></p>
+<h1 id="2-添加全局异常处理"><a href="#2-添加全局异常处理" class="headerlink" title="2. 添加全局异常处理"></a>2. 添加全局异常处理</h1><h2 id="2-1-为什么需要定义全局异常"><a href="#2-1-为什么需要定义全局异常" class="headerlink" title="2.1 为什么需要定义全局异常"></a>2.1 为什么需要定义全局异常</h2><p>说白了就是为了减少前后端交互，出现错误的概率，即使出现错误，也不会导致前端出现崩溃。</p>
+<h2 id="2-2-添加全局异常捕捉类GlobalExceptionResolver"><a href="#2-2-添加全局异常捕捉类GlobalExceptionResolver" class="headerlink" title="2.2 添加全局异常捕捉类GlobalExceptionResolver"></a>2.2 添加全局异常捕捉类<code>GlobalExceptionResolver</code></h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line">@ControllerAdvice</span><br><span class="line">public class GlobalExceptionResolver &#123;</span><br><span class="line">    private final Logger logger = LoggerFactory.getLogger(GlobalExceptionResolver.class);</span><br><span class="line"></span><br><span class="line">    /**</span><br><span class="line">     * 业务异常的处理</span><br><span class="line">     */</span><br><span class="line">    @ExceptionHandler(value = ServiceException.class)</span><br><span class="line">    public void serviceExceptionHandler(HttpServletResponse response, ServiceException e) &#123;</span><br><span class="line">        ResultBean result = ResultResponse.INSTANCE.makeErrRsp(e.getMessage());</span><br><span class="line">        responseResult(response, result);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    /**</span><br><span class="line">     * 其他异常统一处理</span><br><span class="line">     */</span><br><span class="line">    @ExceptionHandler(value = Exception.class)</span><br><span class="line">    public void exceptionHandler(HttpServletResponse response,Exception e) &#123;</span><br><span class="line">        ResultBean result = ResultResponse.INSTANCE.makeErrRsp(&quot;服务器打酱油了，请稍后再试~&quot;);</span><br><span class="line">        logger.error(e.getMessage(), e);</span><br><span class="line">        responseResult(response, result);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    private void responseResult(HttpServletResponse response, ResultBean result) &#123;</span><br><span class="line">        response.setCharacterEncoding(&quot;UTF-8&quot;);</span><br><span class="line">        response.setHeader(&quot;Content-Type&quot;, &quot;application/json;charset=UTF-8&quot;);</span><br><span class="line">        response.setStatus(200);</span><br><span class="line">        try &#123;</span><br><span class="line">            response.getWriter().write(JSON.toJSONString(result, SerializerFeature.WriteMapNullValue));</span><br><span class="line">        &#125; catch (IOException e) &#123;</span><br><span class="line">            logger.error(e.getMessage());</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="2-3-更改配置文件"><a href="#2-3-更改配置文件" class="headerlink" title="2.3 更改配置文件"></a>2.3 更改配置文件</h2><p>打开<code>application.properties</code>，添加下面2行代码<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"># 出现 404 错误时, 直接抛出异常</span><br><span class="line">spring.mvc.throw-exception-if-no-handler-found=true</span><br><span class="line"># 不要为我们工程中的资源文件建立映射</span><br><span class="line">spring.resources.add-mappings=false</span><br></pre></td></tr></table></figure></p>
+<h2 id="2-4-测试接口"><a href="#2-4-测试接口" class="headerlink" title="2.4 测试接口"></a>2.4 测试接口</h2><p><img src="/2018/06/06/SpringBoot学习日记（三）/img2.png" alt="img2"></p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
       
       
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2018" class="archive-year">2018</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/05/23/Github-hexo搭建博客（四）/" class="archive-article-date">
-  	<time datetime="2018-05-23T03:09:16.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-05-23</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/05/23/Github-hexo搭建博客（四）/">Github+hexo搭建博客（四）</a>
-    </h1>
-  
-
-
-  <a href="javascript:;" class="archive-article-date">
-      <i class="icon-smile icon"></i> 阅读数:<span id="/2018/05/23/Github-hexo搭建博客（四）/" class="pageViews">0</span>次
-  </a>
-
-        <div class="article-info info-on-right">
-          
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">GitHub</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">hexo</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">Spring</a>
         		</li>
       		
 		</ul>
 	</div>
 
-          
+      
 
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2018/06/06/SpringBoot学习日记（三）/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/05/23/Github-hexo搭建博客（三）/" class="archive-article-date">
-  	<time datetime="2018-05-23T02:56:10.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-05-23</time>
-</a>
+<nav id="article-nav">
+  
+  
+    <a href="/2018/06/06/SpringBoot学习日记（二）/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">SpringBoot学习日记(二)</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/05/23/Github-hexo搭建博客（三）/">Github+hexo搭建博客（三）</a>
-    </h1>
-  
-
-
-  <a href="javascript:;" class="archive-article-date">
-      <i class="icon-smile icon"></i> 阅读数:<span id="/2018/05/23/Github-hexo搭建博客（三）/" class="pageViews">0</span>次
-  </a>
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">GitHub</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">hexo</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
+        
+        
+        <div class="toc-container tooltip-left">
+            <i class="icon-font icon-category"></i>
+            <div class="tooltip tooltip-east">
+                <span class="tooltip-item">
+                </span>
+                <span class="tooltip-content">
+                    <div class="toc-article">
+                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#1-自定义消息转换器"><span class="toc-number">1.</span> <span class="toc-text">1. 自定义消息转换器</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-1-消息转换器作用"><span class="toc-number">1.1.</span> <span class="toc-text">1.1 消息转换器作用</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1-2-添加fastjson依赖"><span class="toc-number">1.2.</span> <span class="toc-text">1.2 添加fastjson依赖</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1-3-新建WebConfigurer"><span class="toc-number">1.3.</span> <span class="toc-text">1.3 新建WebConfigurer</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1-4-测试"><span class="toc-number">1.4.</span> <span class="toc-text">1.4 测试</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#2-添加全局异常处理"><span class="toc-number">2.</span> <span class="toc-text">2. 添加全局异常处理</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#2-1-为什么需要定义全局异常"><span class="toc-number">2.1.</span> <span class="toc-text">2.1 为什么需要定义全局异常</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-2-添加全局异常捕捉类GlobalExceptionResolver"><span class="toc-number">2.2.</span> <span class="toc-text">2.2 添加全局异常捕捉类GlobalExceptionResolver</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-3-更改配置文件"><span class="toc-number">2.3.</span> <span class="toc-text">2.3 更改配置文件</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-4-测试接口"><span class="toc-number">2.4.</span> <span class="toc-text">2.4 测试接口</span></a></li></ol></li></ol>
+                    </div>
+                </span>
+            </div>
         </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/05/23/Github-hexo搭建博客（二）/" class="archive-article-date">
-  	<time datetime="2018-05-23T02:38:49.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-05-23</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/05/23/Github-hexo搭建博客（二）/">Github+hexo搭建博客（二）</a>
-    </h1>
-  
+        
+    </div>
+</aside>
 
 
-  <a href="javascript:;" class="archive-article-date">
-      <i class="icon-smile icon"></i> 阅读数:<span id="/2018/05/23/Github-hexo搭建博客（二）/" class="pageViews">0</span>次
-  </a>
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">GitHub</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">hexo</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/05/22/Github-hexo搭建博客（一）/" class="archive-article-date">
-  	<time datetime="2018-05-22T08:51:19.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-05-22</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/05/22/Github-hexo搭建博客（一）/">Github+hexo搭建博客（一）</a>
-    </h1>
-  
-
-
-  <a href="javascript:;" class="archive-article-date">
-      <i class="icon-smile icon"></i> 阅读数:<span id="/2018/05/22/Github-hexo搭建博客（一）/" class="pageViews">0</span>次
-  </a>
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">GitHub</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">hexo</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
   
   
-    </div></section>
   
 
-    
+  
 
+  
+
+  
+
+ <!-- 目录内容 -->
+        
+            <p class="show-toc-btn" id="show-toc-btn" onclick="showToc();" style="display:none">
+            <span class="btn-bg"></span>
+            <span class="btn-text">文章导航</span>
+            </p>
+            <div id="toc-article" class="toc-article">
+                <span id="toc-close" class="toc-close" title="隐藏导航" onclick="showBtn();">×</span>
+                <strong class="toc-title">文章目录</strong>
+                <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#1-自定义消息转换器"><span class="toc-number">1.</span> <span class="toc-text">1. 自定义消息转换器</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-1-消息转换器作用"><span class="toc-number">1.1.</span> <span class="toc-text">1.1 消息转换器作用</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1-2-添加fastjson依赖"><span class="toc-number">1.2.</span> <span class="toc-text">1.2 添加fastjson依赖</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1-3-新建WebConfigurer"><span class="toc-number">1.3.</span> <span class="toc-text">1.3 新建WebConfigurer</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1-4-测试"><span class="toc-number">1.4.</span> <span class="toc-text">1.4 测试</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#2-添加全局异常处理"><span class="toc-number">2.</span> <span class="toc-text">2. 添加全局异常处理</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#2-1-为什么需要定义全局异常"><span class="toc-number">2.1.</span> <span class="toc-text">2.1 为什么需要定义全局异常</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-2-添加全局异常捕捉类GlobalExceptionResolver"><span class="toc-number">2.2.</span> <span class="toc-text">2.2 添加全局异常捕捉类GlobalExceptionResolver</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-3-更改配置文件"><span class="toc-number">2.3.</span> <span class="toc-text">2.3 更改配置文件</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-4-测试接口"><span class="toc-number">2.4.</span> <span class="toc-text">2.4 测试接口</span></a></li></ol></li></ol>
+           </div>
+           <script type="text/javascript">
+            function showToc(){
+                var toc_article = document.getElementById("toc-article");
+                var show_toc_btn = document.getElementById("show-toc-btn");
+                toc_article.setAttribute("style","display:block");
+                show_toc_btn.setAttribute("style","display:none");
+                };
+            function showBtn(){
+                var toc_article = document.getElementById("toc-article");
+                var show_toc_btn = document.getElementById("show-toc-btn");
+                toc_article.setAttribute("style","display:none");
+                show_toc_btn.setAttribute("style","display:block");
+                };
+           </script>
+             
+ <!-- 目录内容结束 -->
 
           </div>
         </div>
@@ -384,9 +381,9 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
+		isPost: true,
 		isArchive: false,
-		isTag: true,
+		isTag: false,
 		isCategory: false,
 		open_in_new: false,
 		toc_hide_index: true,
@@ -407,9 +404,9 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
     var yiliaConfig = {
         mathjax: false,
         isHome: false,
-        isPost: false,
+        isPost: true,
         isArchive: false,
-        isTag: true,
+        isTag: false,
         isCategory: false,
         open_in_new: false,
         toc_hide_index: true,
