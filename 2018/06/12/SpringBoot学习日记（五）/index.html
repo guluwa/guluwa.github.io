@@ -6,19 +6,24 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Archives: 2018 | 咕噜娃的博客</title>
+  <title>SpringBoot学习日记（五） | 咕噜娃的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="Android程序员">
-<meta name="keywords" content="Android">
-<meta property="og:type" content="website">
-<meta property="og:title" content="咕噜娃的博客">
-<meta property="og:url" content="http://yoursite.com/archives/2018/index.html">
+  <meta name="description" content="1. 添加redis缓存功能1.1 安装Redis点击下载 Redis压缩包 下载后直接解压到自定义目录，运行cmd命令，进入到这个文件夹，在这个文件夹下运行下面命令，启动redis服务器 redis-server redis.windows.conf 运行下面命令进行测试： redis-cli">
+<meta name="keywords" content="Spring">
+<meta property="og:type" content="article">
+<meta property="og:title" content="SpringBoot学习日记（五）">
+<meta property="og:url" content="http://yoursite.com/2018/06/12/SpringBoot学习日记（五）/index.html">
 <meta property="og:site_name" content="咕噜娃的博客">
-<meta property="og:description" content="Android程序员">
+<meta property="og:description" content="1. 添加redis缓存功能1.1 安装Redis点击下载 Redis压缩包 下载后直接解压到自定义目录，运行cmd命令，进入到这个文件夹，在这个文件夹下运行下面命令，启动redis服务器 redis-server redis.windows.conf 运行下面命令进行测试： redis-cli">
 <meta property="og:locale" content="default">
+<meta property="og:image" content="http://yoursite.com/2018/06/12/SpringBoot学习日记（五）/img1.jpg">
+<meta property="og:image" content="http://yoursite.com/2018/06/12/SpringBoot学习日记（五）/img3.jpg">
+<meta property="og:image" content="http://yoursite.com/2018/06/12/SpringBoot学习日记（五）/img2.jpg">
+<meta property="og:updated_time" content="2018-06-12T01:56:49.249Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="咕噜娃的博客">
-<meta name="twitter:description" content="Android程序员">
+<meta name="twitter:title" content="SpringBoot学习日记（五）">
+<meta name="twitter:description" content="1. 添加redis缓存功能1.1 安装Redis点击下载 Redis压缩包 下载后直接解压到自定义目录，运行cmd命令，进入到这个文件夹，在这个文件夹下运行下面命令，启动redis服务器 redis-server redis.windows.conf 运行下面命令进行测试： redis-cli">
+<meta name="twitter:image" content="http://yoursite.com/2018/06/12/SpringBoot学习日记（五）/img1.jpg">
   
     <link rel="alternative" href="/atom.xml" title="咕噜娃的博客" type="application/atom+xml">
   
@@ -158,31 +163,14 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-SpringBoot学习日记（五）" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2018" class="archive-year">2018</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/06/12/SpringBoot学习日记（五）/" class="archive-article-date">
-  	<time datetime="2018-06-12T01:40:43.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-06-12</time>
-</a>
-        </div>
-    	 
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/06/12/SpringBoot学习日记（五）/">SpringBoot学习日记（五）</a>
+    <h1 class="article-title" itemprop="name">
+      SpringBoot学习日记（五）
     </h1>
   
 
@@ -191,8 +179,41 @@
       <i class="icon-smile icon"></i> 阅读数:<span id="/2018/06/12/SpringBoot学习日记（五）/" class="pageViews">0</span>次
   </a>
 
-        <div class="article-info info-on-right">
-          
+        
+        <a href="/2018/06/12/SpringBoot学习日记（五）/" class="archive-article-date">
+  	<time datetime="2018-06-12T01:40:43.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-06-12</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="1-添加redis缓存功能"><a href="#1-添加redis缓存功能" class="headerlink" title="1. 添加redis缓存功能"></a>1. 添加redis缓存功能</h1><h2 id="1-1-安装Redis"><a href="#1-1-安装Redis" class="headerlink" title="1.1 安装Redis"></a>1.1 安装Redis</h2><p><a href="https://github.com/ServiceStack/redis-windows/tree/master/downloads" target="_blank" rel="noopener">点击下载</a> Redis压缩包</p>
+<p>下载后直接解压到自定义目录，运行cmd命令，进入到这个文件夹，在这个文件夹下运行下面命令，启动redis服务器</p>
+<p><code>redis-server redis.windows.conf</code></p>
+<p>运行下面命令进行测试： <code>redis-cli</code></p>
+<a id="more"></a>
+<p><img src="/2018/06/12/SpringBoot学习日记（五）/img1.jpg" alt="img1"></p>
+<h2 id="1-2-添加Redis依赖"><a href="#1-2-添加Redis依赖" class="headerlink" title="1.2 添加Redis依赖"></a>1.2 添加Redis依赖</h2><p><code>compile(&quot;org.springframework.boot:spring-boot-starter-redis:1.4.5.RELEASE&quot;)</code></p>
+<h2 id="1-3-添加Redis配置信息"><a href="#1-3-添加Redis配置信息" class="headerlink" title="1.3 添加Redis配置信息"></a>1.3 添加Redis配置信息</h2><p>在<code>application.properties</code>中添加</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">spring.redis.host=127.0.0.1</span><br><span class="line">spring.redis.port=6379   </span><br><span class="line">spring.redis.timeout=0</span><br><span class="line">spring.redis.password=</span><br></pre></td></tr></table></figure>
+<h2 id="1-4-创建RedisConfigurer"><a href="#1-4-创建RedisConfigurer" class="headerlink" title="1.4 创建RedisConfigurer"></a>1.4 创建RedisConfigurer</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line">@Configuration</span><br><span class="line">@EnableCaching   //开启缓存</span><br><span class="line">public class RedisConfigurer extends CachingConfigurerSupport &#123;</span><br><span class="line"></span><br><span class="line">    @Bean</span><br><span class="line">    @ConfigurationProperties(prefix=&quot;spring.redis&quot;)</span><br><span class="line">    public JedisPoolConfig getRedisConfig()&#123;</span><br><span class="line">        return new JedisPoolConfig();</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    @Bean</span><br><span class="line">    @ConfigurationProperties(prefix=&quot;spring.redis&quot;)</span><br><span class="line">    public JedisConnectionFactory getConnectionFactory()&#123;</span><br><span class="line">        JedisConnectionFactory factory = new JedisConnectionFactory();</span><br><span class="line">        JedisPoolConfig config = getRedisConfig();</span><br><span class="line">        factory.setPoolConfig(config);</span><br><span class="line">        return factory;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    @Bean</span><br><span class="line">    public RedisTemplate&lt;?, ?&gt; getRedisTemplate()&#123;</span><br><span class="line">        return new StringRedisTemplate(getConnectionFactory());</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="1-5-创建Redis常用方法"><a href="#1-5-创建Redis常用方法" class="headerlink" title="1.5 创建Redis常用方法"></a>1.5 创建Redis常用方法</h2><p><code>RedisService</code></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br></pre></td><td class="code"><pre><span class="line">public interface RedisService &#123;</span><br><span class="line"></span><br><span class="line">    /**</span><br><span class="line">     * 设置给定 key 的值。如果 key 已经存储其他值， SET 就覆写旧值，且无视类型。</span><br><span class="line">     * @param key</span><br><span class="line">     * @param value</span><br><span class="line">     * @return</span><br><span class="line">     */</span><br><span class="line">    boolean set(String key, String value);</span><br><span class="line"></span><br><span class="line">    /**</span><br><span class="line">     * 获取指定 key 的值。如果 key 不存在，返回 nil 。如果key 储存的值不是字符串类型，返回一个错误。</span><br><span class="line">     * @param key</span><br><span class="line">     * @return</span><br><span class="line">     */</span><br><span class="line">    String get(String key);</span><br><span class="line"></span><br><span class="line">    /**</span><br><span class="line">     * 设置 key 的过期时间。key 过期后将不再可用。</span><br><span class="line">     * @param key</span><br><span class="line">     * @param expire</span><br><span class="line">     * @return</span><br><span class="line">     */</span><br><span class="line">    boolean expire(String key, long expire);</span><br><span class="line"></span><br><span class="line">    /**</span><br><span class="line">     * 存集合</span><br><span class="line">     * @param key</span><br><span class="line">     * @param list</span><br><span class="line">     * @param &lt;T&gt;</span><br><span class="line">     * @return</span><br><span class="line">     */</span><br><span class="line">    &lt;T&gt; boolean setList(String key, List&lt;T&gt; list);</span><br><span class="line"></span><br><span class="line">    /**</span><br><span class="line">     * 取集合</span><br><span class="line">     * @param key</span><br><span class="line">     * @param clz</span><br><span class="line">     * @param &lt;T&gt;</span><br><span class="line">     * @return</span><br><span class="line">     */</span><br><span class="line">    &lt;T&gt; List&lt;T&gt; getList(String key, Class&lt;T&gt; clz);</span><br><span class="line"></span><br><span class="line">    /**</span><br><span class="line">     * 将一个或多个值插入到列表头部。 如果 key 不存在，一个空列表会被创建并执行 LPUSH 操作。</span><br><span class="line">     * 当 key 存在但不是列表类型时，返回一个错误。</span><br><span class="line">     * @param key</span><br><span class="line">     * @param obj</span><br><span class="line">     * @return</span><br><span class="line">     */</span><br><span class="line">    long lpush(String key, Object obj);</span><br><span class="line"></span><br><span class="line">    /**</span><br><span class="line">     * 将一个或多个值插入到列表的尾部(最右边)。</span><br><span class="line">     * 如果列表不存在，一个空列表会被创建并执行 RPUSH 操作。 当列表存在但不是列表类型时，返回一个错误。</span><br><span class="line">     * @param key</span><br><span class="line">     * @param obj</span><br><span class="line">     * @return</span><br><span class="line">     */</span><br><span class="line">    long rpush(String key, Object obj);</span><br><span class="line"></span><br><span class="line">    /**</span><br><span class="line">     * 移除并返回列表的第一个元素。</span><br><span class="line">     * @param key</span><br><span class="line">     * @return</span><br><span class="line">     */</span><br><span class="line">    String lpop(String key);</span><br><span class="line"></span><br><span class="line">    /**</span><br><span class="line">     * 删除已存在的键。不存在的 key 会被忽略。</span><br><span class="line">     * @param key</span><br><span class="line">     * @return</span><br><span class="line">     */</span><br><span class="line">    long del(final String key);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p><code>RedisServiceImpl</code></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br></pre></td><td class="code"><pre><span class="line">@Service</span><br><span class="line">public class RedisServiceImpl implements RedisService &#123;</span><br><span class="line"></span><br><span class="line">    @Resource</span><br><span class="line">    private RedisTemplate&lt;String, ?&gt; redisTemplate;</span><br><span class="line"></span><br><span class="line">    @Override</span><br><span class="line">    public boolean set(final String key, final String value) &#123;</span><br><span class="line">        return redisTemplate.execute((RedisCallback&lt;Boolean&gt;) connection -&gt; &#123;</span><br><span class="line">            RedisSerializer&lt;String&gt; serializer = redisTemplate.getStringSerializer();</span><br><span class="line">            connection.set(serializer.serialize(key), serializer.serialize(value));</span><br><span class="line">            return true;</span><br><span class="line">        &#125;);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    @Override</span><br><span class="line">    public String get(final String key)&#123;</span><br><span class="line">        return redisTemplate.execute((RedisCallback&lt;String&gt;) connection -&gt; &#123;</span><br><span class="line">            RedisSerializer&lt;String&gt; serializer = redisTemplate.getStringSerializer();</span><br><span class="line">            byte[] value =  connection.get(serializer.serialize(key));</span><br><span class="line">            return serializer.deserialize(value);</span><br><span class="line">        &#125;);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    @Override</span><br><span class="line">    public long del(final String key)&#123;</span><br><span class="line">        return redisTemplate.execute((RedisCallback&lt;Long&gt;) connection -&gt; &#123;</span><br><span class="line">            RedisSerializer&lt;String&gt; serializer = redisTemplate.getStringSerializer();</span><br><span class="line">            return (long) connection.del(serializer.serialize(key));</span><br><span class="line">        &#125;);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    @Override</span><br><span class="line">    public boolean expire(final String key, long expire) &#123;</span><br><span class="line">        return redisTemplate.expire(key, expire, TimeUnit.SECONDS);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    @Override</span><br><span class="line">    public &lt;T&gt; boolean setList(String key, List&lt;T&gt; list) &#123;</span><br><span class="line">        String value = JSON.toJSONString(list);</span><br><span class="line">        return set(key,value);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    @Override</span><br><span class="line">    public &lt;T&gt; List&lt;T&gt; getList(String key,Class&lt;T&gt; clz) &#123;</span><br><span class="line">        String json = get(key);</span><br><span class="line">        if(json!=null)&#123;</span><br><span class="line">            return JSON.parseArray(json, clz);</span><br><span class="line">        &#125;</span><br><span class="line">        return null;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    @Override</span><br><span class="line">    public long lpush(final String key, Object obj) &#123;</span><br><span class="line">        final String value = JSON.toJSONString(obj);</span><br><span class="line">        return redisTemplate.execute((RedisCallback&lt;Long&gt;) connection -&gt; &#123;</span><br><span class="line">            RedisSerializer&lt;String&gt; serializer = redisTemplate.getStringSerializer();</span><br><span class="line">            return (long) connection.lPush(serializer.serialize(key), serializer.serialize(value));</span><br><span class="line">        &#125;);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    @Override</span><br><span class="line">    public long rpush(final String key, Object obj) &#123;</span><br><span class="line">        final String value = JSON.toJSONString(obj);</span><br><span class="line">        return redisTemplate.execute((RedisCallback&lt;Long&gt;) connection -&gt; &#123;</span><br><span class="line">            RedisSerializer&lt;String&gt; serializer = redisTemplate.getStringSerializer();</span><br><span class="line">            return (long) connection.rPush(serializer.serialize(key), serializer.serialize(value));</span><br><span class="line">        &#125;);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    @Override</span><br><span class="line">    public String lpop(final String key) &#123;</span><br><span class="line">        return redisTemplate.execute((RedisCallback&lt;String&gt;) connection -&gt; &#123;</span><br><span class="line">            RedisSerializer&lt;String&gt; serializer = redisTemplate.getStringSerializer();</span><br><span class="line">            byte[] res =  connection.lPop(serializer.serialize(key));</span><br><span class="line">            return serializer.deserialize(res);</span><br><span class="line">        &#125;);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="1-6-接口测试"><a href="#1-6-接口测试" class="headerlink" title="1.6 接口测试"></a>1.6 接口测试</h2><p>创建<code>RedisController</code></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">@RestController</span><br><span class="line">@RequestMapping(&quot;redis&quot;)</span><br><span class="line">@Api(tags = &#123;&quot;Redis操作接口&quot;&#125;, description = &quot;RedisController&quot;)</span><br><span class="line">public class RedisController &#123;</span><br><span class="line"></span><br><span class="line">    @Resource</span><br><span class="line">    private RedisService redisService;</span><br><span class="line"></span><br><span class="line">    @PostMapping(&quot;/setRedis&quot;)</span><br><span class="line">    @ApiImplicitParams(@ApiImplicitParam(name = &quot;name&quot;, value = &quot;名字&quot;, required = true, dataType = &quot;String&quot;, paramType = &quot;query&quot;))</span><br><span class="line">    public ResultBean setRedis(@RequestParam String name) &#123;</span><br><span class="line">        redisService.set(&quot;name&quot;, name);</span><br><span class="line">        return ResultResponse.INSTANCE.makeOKRsp(name);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    @PostMapping(&quot;/getRedis&quot;)</span><br><span class="line">    public ResultBean getRedis() &#123;</span><br><span class="line">        String name = redisService.get(&quot;name&quot;);</span><br><span class="line">        return ResultResponse.INSTANCE.makeOKRsp(name);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p><img src="/2018/06/12/SpringBoot学习日记（五）/img3.jpg" alt="img3"></p>
+<p><img src="/2018/06/12/SpringBoot学习日记（五）/img2.jpg" alt="img2"></p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
@@ -204,427 +225,147 @@
 		</ul>
 	</div>
 
-          
+      
 
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2018/06/12/SpringBoot学习日记（五）/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/06/06/SpringBoot学习日记（四）/" class="archive-article-date">
-  	<time datetime="2018-06-06T06:51:09.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-06-06</time>
-</a>
+<nav id="article-nav">
+  
+  
+    <a href="/2018/06/06/SpringBoot学习日记（四）/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">SpringBoot学习日记（四）</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/06/06/SpringBoot学习日记（四）/">SpringBoot学习日记（四）</a>
-    </h1>
-  
-
-
-  <a href="javascript:;" class="archive-article-date">
-      <i class="icon-smile icon"></i> 阅读数:<span id="/2018/06/06/SpringBoot学习日记（四）/" class="pageViews">0</span>次
-  </a>
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">Spring</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
+        
+        
+        <div class="toc-container tooltip-left">
+            <i class="icon-font icon-category"></i>
+            <div class="tooltip tooltip-east">
+                <span class="tooltip-item">
+                </span>
+                <span class="tooltip-content">
+                    <div class="toc-article">
+                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#1-添加redis缓存功能"><span class="toc-number">1.</span> <span class="toc-text">1. 添加redis缓存功能</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-1-安装Redis"><span class="toc-number">1.1.</span> <span class="toc-text">1.1 安装Redis</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1-2-添加Redis依赖"><span class="toc-number">1.2.</span> <span class="toc-text">1.2 添加Redis依赖</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1-3-添加Redis配置信息"><span class="toc-number">1.3.</span> <span class="toc-text">1.3 添加Redis配置信息</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1-4-创建RedisConfigurer"><span class="toc-number">1.4.</span> <span class="toc-text">1.4 创建RedisConfigurer</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1-5-创建Redis常用方法"><span class="toc-number">1.5.</span> <span class="toc-text">1.5 创建Redis常用方法</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1-6-接口测试"><span class="toc-number">1.6.</span> <span class="toc-text">1.6 接口测试</span></a></li></ol></li></ol>
+                    </div>
+                </span>
+            </div>
         </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/06/06/SpringBoot学习日记（三）/" class="archive-article-date">
-  	<time datetime="2018-06-06T05:40:16.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-06-06</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/06/06/SpringBoot学习日记（三）/">SpringBoot学习日记（三）</a>
-    </h1>
-  
+        
+    </div>
+</aside>
 
 
-  <a href="javascript:;" class="archive-article-date">
-      <i class="icon-smile icon"></i> 阅读数:<span id="/2018/06/06/SpringBoot学习日记（三）/" class="pageViews">0</span>次
-  </a>
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">Spring</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/06/06/SpringBoot学习日记（二）/" class="archive-article-date">
-  	<time datetime="2018-06-06T02:50:07.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-06-06</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/06/06/SpringBoot学习日记（二）/">SpringBoot学习日记（二）</a>
-    </h1>
-  
-
-
-  <a href="javascript:;" class="archive-article-date">
-      <i class="icon-smile icon"></i> 阅读数:<span id="/2018/06/06/SpringBoot学习日记（二）/" class="pageViews">0</span>次
-  </a>
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">Spring</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/05/31/SpringBoot学习日记（一）/" class="archive-article-date">
-  	<time datetime="2018-05-31T02:46:35.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-05-31</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/05/31/SpringBoot学习日记（一）/">SpringBoot学习日记（一）</a>
-    </h1>
-  
-
-
-  <a href="javascript:;" class="archive-article-date">
-      <i class="icon-smile icon"></i> 阅读数:<span id="/2018/05/31/SpringBoot学习日记（一）/" class="pageViews">0</span>次
-  </a>
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">Spring</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/05/26/App接入淘宝联盟推广/" class="archive-article-date">
-  	<time datetime="2018-05-26T06:25:51.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-05-26</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/05/26/App接入淘宝联盟推广/">App接入淘宝联盟推广</a>
-    </h1>
-  
-
-
-  <a href="javascript:;" class="archive-article-date">
-      <i class="icon-smile icon"></i> 阅读数:<span id="/2018/05/26/App接入淘宝联盟推广/" class="pageViews">0</span>次
-  </a>
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">淘宝</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/05/23/Github-hexo搭建博客（四）/" class="archive-article-date">
-  	<time datetime="2018-05-23T03:09:16.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-05-23</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/05/23/Github-hexo搭建博客（四）/">Github+hexo搭建博客（四）</a>
-    </h1>
-  
-
-
-  <a href="javascript:;" class="archive-article-date">
-      <i class="icon-smile icon"></i> 阅读数:<span id="/2018/05/23/Github-hexo搭建博客（四）/" class="pageViews">0</span>次
-  </a>
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">GitHub</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">hexo</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/05/23/Github-hexo搭建博客（三）/" class="archive-article-date">
-  	<time datetime="2018-05-23T02:56:10.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-05-23</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/05/23/Github-hexo搭建博客（三）/">Github+hexo搭建博客（三）</a>
-    </h1>
-  
-
-
-  <a href="javascript:;" class="archive-article-date">
-      <i class="icon-smile icon"></i> 阅读数:<span id="/2018/05/23/Github-hexo搭建博客（三）/" class="pageViews">0</span>次
-  </a>
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">GitHub</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">hexo</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/05/23/Github-hexo搭建博客（二）/" class="archive-article-date">
-  	<time datetime="2018-05-23T02:38:49.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-05-23</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/05/23/Github-hexo搭建博客（二）/">Github+hexo搭建博客（二）</a>
-    </h1>
-  
-
-
-  <a href="javascript:;" class="archive-article-date">
-      <i class="icon-smile icon"></i> 阅读数:<span id="/2018/05/23/Github-hexo搭建博客（二）/" class="pageViews">0</span>次
-  </a>
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">GitHub</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">hexo</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/05/22/Github-hexo搭建博客（一）/" class="archive-article-date">
-  	<time datetime="2018-05-22T08:51:19.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-05-22</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/05/22/Github-hexo搭建博客（一）/">Github+hexo搭建博客（一）</a>
-    </h1>
-  
-
-
-  <a href="javascript:;" class="archive-article-date">
-      <i class="icon-smile icon"></i> 阅读数:<span id="/2018/05/22/Github-hexo搭建博客（一）/" class="pageViews">0</span>次
-  </a>
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">GitHub</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">hexo</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
   
   
-    </div></section>
   
 
-    
-    <nav id="page-nav">
-      <span class="page-number current">1</span><a class="page-number" href="/archives/2018/page/2/">2</a><a class="extend next" rel="next" href="/archives/2018/page/2/">Next &raquo;</a>
-    </nav>
   
 
+  
+
+  
+
+ <!-- 目录内容 -->
+        
+            <p class="show-toc-btn" id="show-toc-btn" onclick="showToc();" style="display:none">
+            <span class="btn-bg"></span>
+            <span class="btn-text">文章导航</span>
+            </p>
+            <div id="toc-article" class="toc-article">
+                <span id="toc-close" class="toc-close" title="隐藏导航" onclick="showBtn();">×</span>
+                <strong class="toc-title">文章目录</strong>
+                <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#1-添加redis缓存功能"><span class="toc-number">1.</span> <span class="toc-text">1. 添加redis缓存功能</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-1-安装Redis"><span class="toc-number">1.1.</span> <span class="toc-text">1.1 安装Redis</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1-2-添加Redis依赖"><span class="toc-number">1.2.</span> <span class="toc-text">1.2 添加Redis依赖</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1-3-添加Redis配置信息"><span class="toc-number">1.3.</span> <span class="toc-text">1.3 添加Redis配置信息</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1-4-创建RedisConfigurer"><span class="toc-number">1.4.</span> <span class="toc-text">1.4 创建RedisConfigurer</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1-5-创建Redis常用方法"><span class="toc-number">1.5.</span> <span class="toc-text">1.5 创建Redis常用方法</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1-6-接口测试"><span class="toc-number">1.6.</span> <span class="toc-text">1.6 接口测试</span></a></li></ol></li></ol>
+           </div>
+           <script type="text/javascript">
+            function showToc(){
+                var toc_article = document.getElementById("toc-article");
+                var show_toc_btn = document.getElementById("show-toc-btn");
+                toc_article.setAttribute("style","display:block");
+                show_toc_btn.setAttribute("style","display:none");
+                };
+            function showBtn(){
+                var toc_article = document.getElementById("toc-article");
+                var show_toc_btn = document.getElementById("show-toc-btn");
+                toc_article.setAttribute("style","display:none");
+                show_toc_btn.setAttribute("style","display:block");
+                };
+           </script>
+             
+ <!-- 目录内容结束 -->
 
           </div>
         </div>
@@ -646,8 +387,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
@@ -669,8 +410,8 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
     var yiliaConfig = {
         mathjax: false,
         isHome: false,
-        isPost: false,
-        isArchive: true,
+        isPost: true,
+        isArchive: false,
         isTag: false,
         isCategory: false,
         open_in_new: false,
